@@ -1,0 +1,372 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: 'Comic Sans MS', cursive, Arial, sans-serif; /* Set Comic Sans as the primary font */
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-family: 'Comic Sans MS', cursive; /* Apply Comic Sans to headings */
+}
+
+a {
+    color: black; /* Set text color to black for links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button,
+input[type="submit"],
+.cta-button {
+    font-family: 'Comic Sans MS', cursive; /* Apply Comic Sans to buttons */
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+button:hover,
+input[type="submit"]:hover,
+.cta-button:hover {
+    background-color: #45a049;
+}
+
+/* Header styles */
+header {
+    background-color: rgba(255, 255, 255, 0.65); /* White with 0.65 opacity */
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+	justify-content: flex-end; /* Align items to the right */
+}
+nav li:last-child {
+    margin-left: auto; /* Push the last item (Sign Up/Login) to the right */
+}
+nav li {
+    margin-right: 1rem;
+    border: 2px solid rgba(0, 0, 0, 0.5); /* Default border color */
+    border-radius: 1rem;
+    padding: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.3); /* Initial darker shade */
+    transition: background-color 0.3s, border-color 0.3s; /* Add transition effect */
+}
+
+nav li:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Lighter background color on hover */
+    border-color: rgba(0, 0, 0, 0.7); /* Darker border color on hover */
+}
+
+#userStatus {
+    margin-left: 36rem;
+}
+
+nav li a {
+    color: black; /* Set text color to black */
+    text-decoration: none;
+}
+
+nav li:hover a {
+    color: black; /* Keep text color black on hover */
+}
+
+/* Hero section styles */
+#hero {
+    background-image: url("img/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #e1b5b5;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+#hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 30rem;
+}
+
+#hero .cta-button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+/* Destinations section styles */
+#destinations {
+    background-color: rgba(0, 0, 0, 0);
+    padding: 2rem;
+    text-align: center;
+}
+
+#destinations h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+#destinations ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+}
+
+#destinations li {
+    flex-basis: calc(33.33% - 2rem);
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#destinations li:hover {
+    transform: translateY(-5px);
+}
+
+#destinations img {
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+}
+
+#destinations h3 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+#destinations p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Features section styles */
+#features {
+    background-color: rgba(0, 0, 0, 0);
+    padding: 2rem;
+    text-align: center;
+}
+
+#features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+#features ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+}
+
+#features li {
+    flex-basis: calc(33.33% - 2rem);
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#features li:hover {
+    transform: translateY(-5px);
+}
+
+#features h3 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+#features p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* CTA section styles */
+#cta {
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+}
+
+#cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+color: #333;
+}
+
+#cta .cta-button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#cta .cta-button:hover {
+    background-color: #45a049;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.75); /* White with 0.65 opacity */
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+footer p {
+    font-size: 0.8rem;
+}
+/* Square slider animation styles */
+.container {
+    width: 100%;
+    text-align: center;
+}
+
+.square-slider {
+    display: flex;
+    justify-content: space-between; /* Adjust the space between squares */
+    padding: 10px; /* Decrease the gap between squares */
+}
+
+.square {
+    flex: 1;
+    max-width: 375px; /* Increase the size of the squares */
+    height: 250px; /* Adjust as needed */
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.3s ease, margin-top 0.5s ease;
+    margin-top: 50px;
+}
+
+
+.red {
+    background-image: url('./images/Colosseum-removebg-preview.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.purple {
+    background-image: url('./images/pyramid-removebg-preview.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.green {
+    background-image: url('./images/taj-removebg-preview.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.yellow {
+    background-image: url('./images/eiffel-removebg-preview.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.blue {
+    background-image: url('./images/unity-removebg-preview.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.line {
+    background-color: black;
+    height: 2px;
+    width: 100%;
+    margin-top: 20px;
+    opacity: 0; /* Hide the black line */
+}
+
+/* Dynamic background styles */
+.dynamic-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure it's behind other content */
+    animation: changeBackground 20s infinite linear; /* Change every 20 seconds */
+    background: linear-gradient(-45deg, #ff6666, #ff9966, #ffcc66, #ffff66, #66ff66, #66ffff, #6666ff, #ff66ff, #ff6666);
+    background-size: 400% 400%; /* Increase size for motion effect */
+}
+
+@keyframes changeBackground {
+    0% {
+        background-position: 0% 0%; /* Start from top-left */
+    }
+    100% {
+        background-position: 100% 100%; /* End at bottom-right */
+    }
+}
+/* Destination info styles */
+.destination-info {
+    position: relative;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.travel-quote {
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.5;
+    opacity: 0; /* Start with opacity 0 */
+    transform: translateY(20px); /* Start with some vertical offset */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Apply transition effect */
+}
+
+.travel-quote.show-popup {
+    opacity: 1; /* Change opacity to 1 */
+    transform: translateY(0); /* Remove vertical offset */
+}

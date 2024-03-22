@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tripGenie - Flight Booking</title>
+    <link rel="stylesheet" href="flights.css">
+</head>
+<body>
+    <div class="dynamic-background">
+    <div class="container">
+        <h1>Welcome to tripGenie - Flight Booking</h1>
+        <form action="#" method="get">
+            <div class="autocomplete">
+                <label for="departure">Departure:</label>
+                <input type="text" id="departure" name="departure" placeholder="Enter departure airport">
+            </div>
+            <div class="autocomplete">
+                <label for="destination">Destination:</label>
+                <input type="text" id="destination" name="destination" placeholder="Enter destination airport">
+            </div>
+
+            <label for="departure_date">Departure Date:</label>
+            <input type="date" id="departure_date" name="departure_date">
+
+            <label for="return_date">Return Date:</label>
+            <input type="date" id="return_date" name="return_date">
+
+            <label for="budget">Budget:</label>
+            <input type="text" id="budget" name="budget" placeholder="Enter your budget">
+
+            <input type="submit" value="Search Flights">
+        </form>
+    </div>
+</div>
+    <script src="flights.js"></script>
+</body>
+</html>

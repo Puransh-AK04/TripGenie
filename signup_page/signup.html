@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Login &amp; signup form</title>
-  <link rel="stylesheet" href="./signup.css">
+  <link rel="stylesheet" href="signup.css">
 </head>
 <body>
 <div class="wrapper">
@@ -25,11 +25,10 @@
           <input type="text" placeholder="Email Address" required>
         </div>
         <div class="field">
-          <input type="password" placeholder="Password" id="login-password" required>
-          <a href="#" onclick="togglePassword('login-password')">
-            <img src="icons/eye.png" alt="Show Password">
-          </a>
+          <input type="password" id="login-password" placeholder="Password" required>
+          <span class="toggle-password" onclick="togglePasswordVisibility('login-password')">👁</span>
         </div>
+        <div class="caps-lock-warning" style="display: none; color: red; font-size: 12px;">Caps Lock is ON</div>
         <div class="pass-link"><a href="#">Forgot password?</a></div>
         <div class="field btn">
           <div class="btn-layer"></div>
@@ -42,38 +41,25 @@
           <input type="text" placeholder="Email Address" required>
         </div>
         <div class="field">
-          <input type="password" placeholder="Password" id="signup-password" required>
-          <a href="#" onclick="togglePassword('signup-password')">
-            <img src="icons/eye.png" alt="Show Password">
-          </a>
+          <input type="password" id="signup-password" placeholder="Password" required>
+          <span class="toggle-password" onclick="togglePasswordVisibility('signup-password')">👁</span>
+          <div class="caps-lock-warning" style="display: none; color: red; font-size: 12px;">Caps Lock is ON</div>
         </div>
         <div class="field">
-          <input type="password" placeholder="Confirm password" required>
-          <!-- <a href="#" onclick="togglePassword('signup-password')">
-            <img src="icons/eye.png" alt="Show Password">
-            </a> -->
+          <input type="password" id="confirm-password" placeholder="Confirm password" required>
+          <span class="toggle-password" onclick="togglePasswordVisibility('confirm-password')">👁</span>
+          <div class="caps-lock-warning" style="display: none; color: red; font-size: 12px;">Caps Lock is ON</div>
         </div>
         <div class="field btn">
           <div class="btn-layer"></div>
-          <input type="submit" value="Signup">
+          <input type="submit" value="Signup" onclick="checkPasswordMatch()">
         </div>
+        <div class="login-link">Already a member? <a href="#">Login now</a></div>
       </form>
     </div>
   </div>
 </div>
-<script src="./signup.js"></script>
-<!-- <script>
-  function togglePassword(inputId) {
-    const passwordInput = document.getElementById(inputId);
-    const toggleBtn = passwordInput.nextElementSibling;
-    if (passwordInput.type === "password") {
-      passwordInput.type = "text";
-      toggleBtn.innerHTML = '<img src="icons/not_eye.png" alt="Hide Password">';
-    } else {
-      passwordInput.type = "password";
-      toggleBtn.innerHTML = '<img src="icons/eye.png" alt="Show Password">';
-    }
-  }
-</script> -->
+<script src="signup.js"></script>
+
 </body>
 </html>
