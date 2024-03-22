@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login &amp; signup form</title>
+  <link rel="stylesheet" href="./signup.css">
+</head>
+<body>
+<div class="wrapper">
+  <div class="title-text">
+    <div class="title login">Login Form</div>
+    <div class="title signup">Signup Form</div>
+  </div>
+  <div class="form-container">
+    <div class="slide-controls">
+      <input type="radio" name="slide" id="login" checked>
+      <input type="radio" name="slide" id="signup">
+      <label for="login" class="slide login">Login</label>
+      <label for="signup" class="slide signup">Signup</label>
+      <div class="slider-tab"></div>
+    </div>
+    <div class="form-inner">
+      <form action="#" class="login">
+        <div class="field">
+          <input type="text" placeholder="Email Address" required>
+        </div>
+        <div class="field">
+          <input type="password" placeholder="Password" id="login-password" required>
+          <a href="#" onclick="togglePassword('login-password')">
+            <img src="icons/eye.png" alt="Show Password">
+          </a>
+        </div>
+        <div class="pass-link"><a href="#">Forgot password?</a></div>
+        <div class="field btn">
+          <div class="btn-layer"></div>
+          <input type="submit" value="Login">
+        </div>
+        <div class="signup-link">Not a member? <a href="#">Signup now</a></div>
+      </form>
+      <form action="#" class="signup">
+        <div class="field">
+          <input type="text" placeholder="Email Address" required>
+        </div>
+        <div class="field">
+          <input type="password" placeholder="Password" id="signup-password" required>
+          <a href="#" onclick="togglePassword('signup-password')">
+            <img src="icons/eye.png" alt="Show Password">
+          </a>
+        </div>
+        <div class="field">
+          <input type="password" placeholder="Confirm password" required>
+          <!-- <a href="#" onclick="togglePassword('signup-password')">
+            <img src="icons/eye.png" alt="Show Password">
+            </a> -->
+        </div>
+        <div class="field btn">
+          <div class="btn-layer"></div>
+          <input type="submit" value="Signup">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script src="./signup.js"></script>
+<!-- <script>
+  function togglePassword(inputId) {
+    const passwordInput = document.getElementById(inputId);
+    const toggleBtn = passwordInput.nextElementSibling;
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      toggleBtn.innerHTML = '<img src="icons/not_eye.png" alt="Hide Password">';
+    } else {
+      passwordInput.type = "password";
+      toggleBtn.innerHTML = '<img src="icons/eye.png" alt="Show Password">';
+    }
+  }
+</script> -->
+</body>
+</html>
