@@ -170,6 +170,7 @@ input[type="radio"] + label {
     border: 1px solid #ccc;
     border-radius: 5px;
     cursor: pointer;
+    text-align: center;
     align-items: center;
 }
 
