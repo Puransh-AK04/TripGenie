@@ -16,6 +16,8 @@ app.use(express.json());
 // Define a route to serve static files from the 'public' folder
 app.use(express.static(path.join(__dirname, '..', 'PreHome')));
 app.use(express.static(path.join(__dirname, '..', 'Flight')));
+app.use(express.static(path.join(__dirname, '..', 'Destination')));
+app.use(express.static(path.join(__dirname, '..', 'blog')));
 app.use(express.static(path.join(__dirname, '..', 'Frontend')));
 app.use(express.static(path.join(__dirname, '..', 'signup_page')));
 
@@ -34,22 +36,23 @@ app.get('/home', (req, res) => {
 
 // Combined sign-up and login route
 
-app.post('/auth/login', (req, res) => {
-    const { action } = req.body;
+app.get('/auth', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'signup_page', 'signup.html'));
+    // const { action } = req.body;
   
-    // Check if action field is provided
-    if (!action) {
-      return res.status(400).json({ error: 'Action field is required' });
-    }
+    // // Check if action field is provided
+    // if (!action) {
+    //   return res.status(400).json({ error: 'Action field is required' });
+    // }
   
-    // Route to appropriate function based on action
-    if (action == 'signup') {
-      signup(req, res);
-    } else if (action == 'login') {
-      login(req, res);
-    } else {
-      res.status(400).json({ error: 'Invalid action' });
-    }
+    // // Route to appropriate function based on action
+    // if (action == 'signup') {
+    //   signup(req, res);
+    // } else if (action == 'login') {
+    //   login(req, res);
+    // } else {
+    //   res.status(400).json({ error: 'Invalid action' });
+    // }
   });
   
 

@@ -1,74 +1,120 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <title>Login &amp; signup form</title>
-  <link rel="stylesheet" href="signup.css">
-</head>
-
-<body>
-  <div class="wrapper">
-    <div class="title-text">
-      <div class="title login">Login Form</div>
-      <div class="title signup">Signup Form</div>
-    </div>
-    <div class="form-container">
-      <div class="slide-controls">
-        <input type="radio" name="slide" id="login" checked>
-        <input type="radio" name="slide" id="signup">
-        <label for="login" class="slide login">Login</label>
-        <label for="signup" class="slide signup">Signup</label>
-        <div class="slider-tab"></div>
-      </div>
-      <div class="form-inner">
-        <form action="/auth" method="POST" class="login" >
-          <div class="field">
-            <input type="email" placeholder="Email Address" required>
-          </div>
-          <div class="field">
-            <input type="password" id="login-password" placeholder="Password" required>
-            <span class="toggle-password" onclick="togglePasswordVisibility('login-password')">👁</span>
-          </div>
-          <div class="caps-lock-warning" style="display: none; color: red; font-size: 12px;">Caps Lock is ON</div>
-          <div class="pass-link"><a href="#">Forgot password?</a></div>
-          <div class="field btn">
-            <div class="btn-layer"></div>
-            <input type="submit" value="Login">
-          </div>
-          <div class="signup-link">Not a member? <a href="#">Signup now</a></div>
-        </form>
-        <form action="/auth" method="POST" class="signup" >
-          <div class="field">
-            <input type="email" placeholder="Email Address" required>
-          </div>
-          <div class="field">
-            <input type="password" id="signup-password" placeholder="Password" required>
-            <span class="toggle-password" onclick="togglePasswordVisibility('signup-password')">👁</span>
-            <div class="caps-lock-warning" style="display: none; color: red; font-size: 12px;">Caps Lock is ON</div>
-          </div>
-          <div class="field">
-            <input type="password" id="confirm-password" placeholder="Confirm password" required>
-            <span class="toggle-password" onclick="togglePasswordVisibility('confirm-password')">👁</span>
-            <div class="caps-lock-warning" style="display: none; color: red; font-size: 12px;">Caps Lock is ON</div>
-          </div>
-          <div class="field btn">
-            <div class="btn-layer"></div>
-            <input type="submit" value="Signup" onclick="checkPasswordMatch()">
-          </div>
-          <div class="login-link">Already a member? <a href="#">Login now</a></div>
-        </form>
-      </div>
-    </div>
-  </div>
-  <script src="signup.js"></script>
-
-</body>
-
-</html> -->
-
-
 <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login &amp; signup form</title>
+    <link rel="stylesheet" href="signup.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="title-text">
+        <div class="title login">Login Form</div>
+        <div class="title signup">Signup Form</div>
+      </div>
+      <div class="form-container">
+        <div class="slide-controls">
+          <input type="radio" name="slide" id="login" checked />
+          <input type="radio" name="slide" id="signup" />
+          <label for="login" class="slide login">Login</label>
+          <label for="signup" class="slide signup">Signup</label>
+          <div class="slider-tab"></div>
+        </div>
+        <div class="form-inner">
+          <form action="/auth" method="POST" class="login">
+            <div class="field">
+              <input type="email" placeholder="Email Address" required />
+            </div>
+            <div class="field">
+              <input
+                type="password"
+                id="login-password"
+                placeholder="Password"
+                required
+              />
+              <span
+                class="toggle-password"
+                onclick="togglePasswordVisibility('login-password')"
+                >👁</span
+              >
+            </div>
+            <div
+              class="caps-lock-warning"
+              style="display: none; color: red; font-size: 12px"
+            >
+              Caps Lock is ON
+            </div>
+            <div class="pass-link"><a href="#">Forgot password?</a></div>
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <input type="submit" value="Login" />
+            </div>
+            <div class="signup-link">
+              Not a member? <a href="#">Signup now</a>
+            </div>
+          </form>
+          <form action="/auth" method="POST" class="signup">
+            <div class="field">
+              <input type="email" placeholder="Email Address" required />
+            </div>
+            <div class="field">
+              <input
+                type="password"
+                id="signup-password"
+                placeholder="Password"
+                required
+              />
+              <span
+                class="toggle-password"
+                onclick="togglePasswordVisibility('signup-password')"
+                >👁</span
+              >
+              <div
+                class="caps-lock-warning"
+                style="display: none; color: red; font-size: 12px"
+              >
+                Caps Lock is ON
+              </div>
+            </div>
+            <div class="field">
+              <input
+                type="password"
+                id="confirm-password"
+                placeholder="Confirm password"
+                required
+              />
+              <span
+                class="toggle-password"
+                onclick="togglePasswordVisibility('confirm-password')"
+                >👁</span
+              >
+              <div
+                class="caps-lock-warning"
+                style="display: none; color: red; font-size: 12px"
+              >
+                Caps Lock is ON
+              </div>
+            </div>
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <input
+                type="submit"
+                value="Signup"
+                onclick="checkPasswordMatch()"
+              />
+            </div>
+            <div class="login-link">
+              Already a member? <a href="#">Login now</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="signup.js"></script>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
 <html>
 <head>
     <title>Login</title>
@@ -109,8 +155,8 @@
                 <span class="m-up">Sign Up</span>
                 <span class="m-in">Login</span>
             </div>
-        </div> -->
-        <form action="/auth" method="POST" class="needs-validation">
+        </div> 
+         <form action="/auth" method="POST" class="needs-validation">
             <input type="hidden" name="action" value="signup">
             <div class="form sign-up">
                 <h2>Sign Up</h2>
@@ -134,4 +180,4 @@
 <script src="../js/auth.js"></script>
 
 </body>
-</html>
+</html> -->

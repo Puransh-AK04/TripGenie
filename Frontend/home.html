@@ -1,106 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="home.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="home.css" />
     <title>TripGenie</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav class="navbar">
-            <ul>
-                <li><a href="flight.html">Flights</a></li>
-                <li><a href="#">Destinations</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
-                <li id="userStatus" class="user-button"></li>
-            </ul>
-
-        </nav>
+      <nav class="navbar">
+        <ul>
+          <li><a href="flight.html">Flights</a></li>
+          <li><a href="destination.html">Destinations</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="NewBlog.html">Blogs</a></li>
+          <li id="userStatus" class="user-button"></li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <section id="hero">
-            <!-- <h1>Plan Your Dream Trip with TripGenie</h1>
+      <section id="hero">
+        <!-- <h1>Plan Your Dream Trip with TripGenie</h1>
             <p>Explore the world and create unforgettable memories with us.</p> -->
-            <div class="dynamic-background"></div>
-            <div class="container">
-                <div class="destination-info">
-                    <h2 class="travel-quote">"Explore the world, discover yourself!"</h2>
-                </div>
-                <div class="square-slider">
-                    <div class="square red"></div>
-                    <div class="square blue"></div>
-                    <div class="square green"></div>
-                    <div class="square yellow"></div>
-                    <div class="square purple"></div>
-                </div>
-                <div class="line"></div>
-            </div>
+        <div class="dynamic-background"></div>
+        <div class="container">
+          <div class="destination-info">
+            <h2 class="travel-quote">
+              "Explore the world, discover yourself!"
+            </h2>
+          </div>
+          <div class="square-slider">
+            <div class="square red"></div>
+            <div class="square blue"></div>
+            <div class="square green"></div>
+            <div class="square yellow"></div>
+            <div class="square purple"></div>
+          </div>
+          <div class="line"></div>
+        </div>
 
-            <!-- <a href="#" class="cta-button">Get Started</a> -->
-        </section>
-        <section id="destinations">
-            <div class="ved_cont">
-                <iframe src="https://www.youtube.com/embed/KJwYBJMSbPI?autoplay=1&loop=1&controls=0&mute=1&playlist=KJwYBJMSbPI&start=19" frameborder="0" allowfullscreen></iframe>
-                <h2>Top Destinations</h2>
-                <ul class="destination-list">
-                    <li>
-                        <img src="https://images.indianexpress.com/2024/02/lakshadweep-island.jpg" alt="Destination 1">
-                        <h3>Lakshadweep</h3>
-                        <p>Discover the beauty of Lakshadweep.</p>
-                        <button class="explore-button">Explore</button>
-                    </li>
-                    <li>
-                            <img src="https://www.visitdubai.com/-/media/gathercontent/poi/b/burj-khalifa/fallback-image/poi-burj-khalifa-3-dtcm-jun-2023.jpg" alt="Destination 2">
-                            <h3>Dubai</h3>
-                            <p>Experience the adventure of Dubai.</p>
-                            <button class="explore-button">Explore</button>
-                    </li>
-                    <li>
-                            <img src="https://cdn.britannica.com/65/162465-050-9CDA9BC9/Alps-Switzerland.jpg" alt="Destination 3">
-                            <h3>Switzerland</h3>
-                            <p>Relax and unwind in Switzerland.</p>
-                            <button class="explore-button">Explore</button>
+        <!-- <a href="#" class="cta-button">Get Started</a> -->
+      </section>
+      <section id="destinations">
+        <div class="ved_cont">
+          <iframe
+            src="https://www.youtube.com/embed/KJwYBJMSbPI?autoplay=1&loop=1&controls=0&mute=1&playlist=KJwYBJMSbPI&start=19"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+          <h2>Top Destinations</h2>
+          <ul class="destination-list">
+            <li>
+              <img
+                src="https://images.indianexpress.com/2024/02/lakshadweep-island.jpg"
+                alt="Destination 1"
+              />
+              <h3>Lakshadweep</h3>
+              <p>Discover the beauty of Lakshadweep.</p>
+              <button class="explore-button">Explore</button>
+            </li>
+            <li>
+              <img
+                src="https://www.visitdubai.com/-/media/gathercontent/poi/b/burj-khalifa/fallback-image/poi-burj-khalifa-3-dtcm-jun-2023.jpg"
+                alt="Destination 2"
+              />
+              <h3>Dubai</h3>
+              <p>Experience the adventure of Dubai.</p>
+              <button class="explore-button">Explore</button>
+            </li>
+            <li>
+              <img
+                src="https://cdn.britannica.com/65/162465-050-9CDA9BC9/Alps-Switzerland.jpg"
+                alt="Destination 3"
+              />
+              <h3>Switzerland</h3>
+              <p>Relax and unwind in Switzerland.</p>
+              <button class="explore-button">Explore</button>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-                    </li>
-                </ul>
-            </div>
-        </section>
-        
-        <section id="features">
-            <h2>Why Choose TripGenie?</h2>
-            <ul>
-                <li>
-                    <h3>Personalized Recommendations</h3>
-                    <p>We use advanced algorithms to provide you with personalized travel recommendations based on your
-                        interests and preferences.</p>
-                </li>
-                <li>
-                    <h3>Exclusive Deals</h3>
-                    <p>We partner with top travel providers to offer you exclusive deals and discounts on flights,
-                        hotels, and activities.</p>
-                </li>
-                <li>
-                    <h3>Easy-to-Use Interface</h3>
-                    <p>Our intuitive interface makes it easy to plan and book your trip, even if you're a first-time
-                        user.</p>
-                </li>
-            </ul>
-        </section>
-        <section id="cta">
-            <h2>Ready to Start Planning Your Dream Trip?</h2>
-            <a href="/auth" class="cta-button">Sign Up Now</a>
-        </section>
+      <section id="features">
+        <h2>Why Choose TripGenie?</h2>
+        <ul>
+          <li>
+            <h3>Personalized Recommendations</h3>
+            <p>
+              We use advanced algorithms to provide you with personalized travel
+              recommendations based on your interests and preferences.
+            </p>
+          </li>
+          <li>
+            <h3>Exclusive Deals</h3>
+            <p>
+              We partner with top travel providers to offer you exclusive deals
+              and discounts on flights, hotels, and activities.
+            </p>
+          </li>
+          <li>
+            <h3>Easy-to-Use Interface</h3>
+            <p>
+              Our intuitive interface makes it easy to plan and book your trip,
+              even if you're a first-time user.
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section id="cta">
+        <h2>Ready to Start Planning Your Dream Trip?</h2>
+        <a href="/auth" class="cta-button">Sign Up Now</a>
+      </section>
     </main>
     <footer>
-        <p>&copy; 2024 TripGenie. All rights reserved.</p>
+      <p>&copy; 2024 TripGenie. All rights reserved.</p>
     </footer>
 
     <script src="home.js"></script>
-
-</body>
-
+  </body>
 </html>
