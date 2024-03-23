@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    cursor: none;
+    background-color: #FFDDD2;
+    position: relative;
+  }
+  
+  #startButton {
+    background-image: url('./images/Designer-removebg-preview.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent; /* Set the background color to transparent */
+    color: transparent;
+    padding: 2em;
+    font-size: 1.5em;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 4;
+    width: 10em;
+    height: 10em;
+    border-radius: 0%; /* Ensures the button is circular */
+  }
+  
+  
+  #backgroundImage {
+    position: absolute;
+    background: url('./images/Designer-removebg-preview.png') center/contain no-repeat;
+    width: 200px;
+    height: 200px;
+    z-index: 3;
+    transition: transform 0.5s ease;
+  }
+  #centerImage{
+  display:none;
+  height:250px;
+  width:250px;}
+  #coordinatesDisplay {
+    display: none;
+  }
+  
+  #customImage {
+    position: fixed;
+    /* width: 150px; */
+    height: 150px;
+    object-fit: contain;
+    z-index: -1;
+    transition: transform 0.3s ease; /* Added smooth transition for the transform property */
+  }
+  
+  
+  #pawPrint {
+    display: none;
+    position: fixed;
+    width: 30px;
+    height: auto;
+    transition: right 0.3s, bottom 0.3s, transform 0.3s;
+    z-index: 1;
+    right: 10px;
+    bottom: 10px;
+  }
+  
+  #customCursor {
+    position: fixed;
+    width: 50px;
+    height: auto;
+    z-index: -2;
+  }
+  #followCursorImage {
+    z-index: -1;
+  }
+  #startButton:hover + #backgroundImage {
+    transform: translateY(-100px);
+  }
