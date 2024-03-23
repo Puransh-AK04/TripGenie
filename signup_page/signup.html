@@ -1,65 +1,137 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Login &amp; signup form</title>
   <link rel="stylesheet" href="signup.css">
 </head>
+
 <body>
-<div class="wrapper">
-  <div class="title-text">
-    <div class="title login">Login Form</div>
-    <div class="title signup">Signup Form</div>
-  </div>
-  <div class="form-container">
-    <div class="slide-controls">
-      <input type="radio" name="slide" id="login" checked>
-      <input type="radio" name="slide" id="signup">
-      <label for="login" class="slide login">Login</label>
-      <label for="signup" class="slide signup">Signup</label>
-      <div class="slider-tab"></div>
+  <div class="wrapper">
+    <div class="title-text">
+      <div class="title login">Login Form</div>
+      <div class="title signup">Signup Form</div>
     </div>
-    <div class="form-inner">
-      <form action="#" class="login">
-        <div class="field">
-          <input type="text" placeholder="Email Address" required>
-        </div>
-        <div class="field">
-          <input type="password" id="login-password" placeholder="Password" required>
-          <span class="toggle-password" onclick="togglePasswordVisibility('login-password')">👁</span>
-        </div>
-        <div class="caps-lock-warning" style="display: none; color: red; font-size: 12px;">Caps Lock is ON</div>
-        <div class="pass-link"><a href="#">Forgot password?</a></div>
-        <div class="field btn">
-          <div class="btn-layer"></div>
-          <input type="submit" value="Login">
-        </div>
-        <div class="signup-link">Not a member? <a href="#">Signup now</a></div>
-      </form>
-      <form action="#" class="signup">
-        <div class="field">
-          <input type="text" placeholder="Email Address" required>
-        </div>
-        <div class="field">
-          <input type="password" id="signup-password" placeholder="Password" required>
-          <span class="toggle-password" onclick="togglePasswordVisibility('signup-password')">👁</span>
+    <div class="form-container">
+      <div class="slide-controls">
+        <input type="radio" name="slide" id="login" checked>
+        <input type="radio" name="slide" id="signup">
+        <label for="login" class="slide login">Login</label>
+        <label for="signup" class="slide signup">Signup</label>
+        <div class="slider-tab"></div>
+      </div>
+      <div class="form-inner">
+        <form action="/auth" method="POST" class="login" >
+          <div class="field">
+            <input type="email" placeholder="Email Address" required>
+          </div>
+          <div class="field">
+            <input type="password" id="login-password" placeholder="Password" required>
+            <span class="toggle-password" onclick="togglePasswordVisibility('login-password')">👁</span>
+          </div>
           <div class="caps-lock-warning" style="display: none; color: red; font-size: 12px;">Caps Lock is ON</div>
-        </div>
-        <div class="field">
-          <input type="password" id="confirm-password" placeholder="Confirm password" required>
-          <span class="toggle-password" onclick="togglePasswordVisibility('confirm-password')">👁</span>
-          <div class="caps-lock-warning" style="display: none; color: red; font-size: 12px;">Caps Lock is ON</div>
-        </div>
-        <div class="field btn">
-          <div class="btn-layer"></div>
-          <input type="submit" value="Signup" onclick="checkPasswordMatch()">
-        </div>
-        <div class="login-link">Already a member? <a href="#">Login now</a></div>
-      </form>
+          <div class="pass-link"><a href="#">Forgot password?</a></div>
+          <div class="field btn">
+            <div class="btn-layer"></div>
+            <input type="submit" value="Login">
+          </div>
+          <div class="signup-link">Not a member? <a href="#">Signup now</a></div>
+        </form>
+        <form action="/auth" method="POST" class="signup" >
+          <div class="field">
+            <input type="email" placeholder="Email Address" required>
+          </div>
+          <div class="field">
+            <input type="password" id="signup-password" placeholder="Password" required>
+            <span class="toggle-password" onclick="togglePasswordVisibility('signup-password')">👁</span>
+            <div class="caps-lock-warning" style="display: none; color: red; font-size: 12px;">Caps Lock is ON</div>
+          </div>
+          <div class="field">
+            <input type="password" id="confirm-password" placeholder="Confirm password" required>
+            <span class="toggle-password" onclick="togglePasswordVisibility('confirm-password')">👁</span>
+            <div class="caps-lock-warning" style="display: none; color: red; font-size: 12px;">Caps Lock is ON</div>
+          </div>
+          <div class="field btn">
+            <div class="btn-layer"></div>
+            <input type="submit" value="Signup" onclick="checkPasswordMatch()">
+          </div>
+          <div class="login-link">Already a member? <a href="#">Login now</a></div>
+        </form>
+      </div>
     </div>
   </div>
+  <script src="signup.js"></script>
+
+</body>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../stylesheets/auth.css">
+</head>
+<body>
+
+<div class="cont">
+    <div class="form sign-in">
+        <form action="/auth" method="POST" class="needs-validation">
+            <input type="hidden" name="action" value="login">
+            <h2>Login</h2>
+            <label for="email_login" class="form-label">
+                <span>Email</span>
+                <input type="email" class="form-control" name="email" id="email_login" placeholder="" novalidate autofocus required>
+            </label>
+            <label for="password_login" class="form-label">
+                <span>Password</span>
+                <input type="password" class="form-control" name="password" id="password_login" placeholder="" required>
+            </label>
+            <button class="submit" type="submit">Login</button>
+        </form>
+    </div>
+
+    <div class="sub-cont">
+        <!-- <div class="img">
+            <div class="img-text m-up">
+                <h2>New here?</h2>
+                <p>Sign up and discover the unlimited amount of cuteness!</p>
+            </div>
+            <div class="img-text m-in">
+                <h2>One of us?</h2>
+                <p>If you already have an account, just sign in. We've missed you!</p>
+            </div>
+            <div class="img-btn">
+                <span class="m-up">Sign Up</span>
+                <span class="m-in">Login</span>
+            </div>
+        </div> -->
+        <form action="/auth" method="POST" class="needs-validation">
+            <input type="hidden" name="action" value="signup">
+            <div class="form sign-up">
+                <h2>Sign Up</h2>
+                <label for="email_signup" class="form-label">
+                    <span>Email</span>
+                    <input type="email" class="form-control" name="email" id="email_signup" autofocus novalidate required>
+                </label>
+                <label for="password_signup" class="form-label">
+                    <span>Password</span>
+                    <input type="password" class="form-control" name="password" id="password_signup" required>
+                </label>
+                <label for="confirm_password" class="form-label">
+                    <span>Confirm Password</span>
+                    <input type="password" class="form-control" name="confirm_password" id="confirm_password" required>
+                </label>
+                <button type="submit" class="submit">Sign Up Now</button>
+            </div>
+        </form>
+    </div>
 </div>
-<script src="signup.js"></script>
+<script src="../js/auth.js"></script>
 
 </body>
 </html>

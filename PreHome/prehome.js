@@ -2,10 +2,10 @@ var ctr = 0;
 var prevDir = '';
 
 document.getElementById('startButton').addEventListener('click', function () {
-  window.location.href = 'page2.html';
+  window.location.href = '/home';
 });
 document.getElementById('centerImage').addEventListener('click', function () {
-  window.location.href = 'page2.html';
+  window.location.href = '/home';
 });
 document.getElementById('startButton').addEventListener('mouseenter', function () {
   

@@ -4,6 +4,7 @@ const loginText = document.querySelector(".title-text .login");
   const signupBtn = document.querySelector("label.signup");
   const signupLink = document.querySelector("form .signup-link a");
   const loginLink = document.querySelector("form .login-link a");
+  
   signupBtn.onclick = () => {
     loginForm.style.marginLeft = "-50%";
     loginText.style.marginLeft = "-50%";
