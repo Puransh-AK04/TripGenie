@@ -12,19 +12,26 @@ const PORT = process.env.PORT || 3000;
 
 // Middleware for parsing JSON requests
 app.use(express.json());
-app.set('view engine', 'ejs');
 
 // Define a route to serve static files from the 'public' folder
+app.use(express.static(path.join(__dirname, '..', 'PreHome')));
+app.use(express.static(path.join(__dirname, '..', 'Flight')));
 app.use(express.static(path.join(__dirname, '..', 'Frontend')));
 app.use(express.static(path.join(__dirname, '..', 'signup_page')));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'Frontend', 'home.html'));
+    res.sendFile(path.join(__dirname, '..', 'PreHome', 'prehome.html'));
   });
+
+app.get('/home', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'Frontend', 'home.html'));
+});
+
+
 
 // Combined sign-up and login route
 
-app.post('/auth', (req, res) => {
+app.post('/auth/login', (req, res) => {
     const { action } = req.body;
   
     // Check if action field is provided
@@ -33,9 +40,9 @@ app.post('/auth', (req, res) => {
     }
   
     // Route to appropriate function based on action
-    if (action === 'signup') {
+    if (action == 'signup') {
       signup(req, res);
-    } else if (action === 'login') {
+    } else if (action == 'login') {
       login(req, res);
     } else {
       res.status(400).json({ error: 'Invalid action' });
