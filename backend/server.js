@@ -27,6 +27,9 @@ app.get('/home', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'Frontend', 'home.html'));
 });
 
+// app.get('/signup', (req, res) => {
+//   res.sendFile(path.join(__dirname, '..', 'signup_page', 'signup.html'));
+// });
 
 
 // Combined sign-up and login route
