@@ -121,6 +121,9 @@ const airports = [
     "George Best Belfast City Airport (11)",
     "George Best Belfast City Airport (12)",
 ];
+
+
+
 function autocomplete(input, airportList, oppositeInput) {
     let currentFocus;
 
@@ -219,4 +222,36 @@ departureInput.addEventListener("input", function() {
 
 destinationInput.addEventListener("input", function() {
     autocomplete(destinationInput, airports, departureInput);
+});
+
+// Select departure and return date inputs
+const departureDateInput = document.getElementById("departure_date");
+const returnDateInput = document.getElementById("return_date");
+const searchButton = document.querySelector("input[type='submit']");
+
+// Add event listener to return date input
+returnDateInput.addEventListener("change", function() {
+    // Parse departure and return dates
+    const departureDate = new Date(departureDateInput.value);
+    const returnDate = new Date(returnDateInput.value);
+
+    // Check if return date is less than or equal to departure date
+    if (returnDate <= departureDate) {
+        // Display warning message
+        alert("Return date should be after departure date.");
+
+        // Disable search button
+        searchButton.disabled = true;
+    } else {
+        // Enable search button
+        searchButton.disabled = false;
+    }
+});
+// Select the budget slider and its value display element
+const budgetSlider = document.getElementById("budget");
+const budgetValueDisplay = document.getElementById("budgetValue");
+
+// Add event listener to update value display when slider value changes
+budgetSlider.addEventListener("input", function() {
+    budgetValueDisplay.textContent = this.value;
 });

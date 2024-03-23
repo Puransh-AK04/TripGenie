@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tripGenie - Flight Booking</title>
+    <title>TripGenie - Flight Booking</title>
     <link rel="stylesheet" href="flights.css">
 </head>
 <body>
     <div class="dynamic-background">
     <div class="container">
-        <h1>Welcome to tripGenie - Flight Booking</h1>
+        <h1>Welcome to TripGenie - Flight Booking</h1>
         <form action="#" method="get">
             <div class="autocomplete">
                 <label for="departure">Departure:</label>
@@ -20,16 +20,46 @@
                 <input type="text" id="destination" name="destination" placeholder="Enter destination airport">
             </div>
 
-            <label for="departure_date">Departure Date:</label>
-            <input type="date" id="departure_date" name="departure_date">
+            <div class="date">
+                <label for="departure_date">Departure Date:</label>
+                <input type="date" id="departure_date" name="departure_date">
+            </div>
 
-            <label for="return_date">Return Date:</label>
-            <input type="date" id="return_date" name="return_date">
+            <div class="date">
+                <label for="return_date">Return Date:</label>
+                <input type="date" id="return_date" name="return_date">
+            </div>
+            <div class="flight-class">
+                <label>Flight Class:</label>
+                <div>
+                    <input type="radio" id="economy" name="flight_class" value="economy" checked>
+                    <label for="economy">Economy</label>
+                </div>
+                <div>
+                    <input type="radio" id="premium_economy" name="flight_class" value="premium_economy">
+                    <label for="premium_economy">Premium Economy</label>
+                </div>
+                <div>
+                    <input type="radio" id="business" name="flight_class" value="business">
+                    <label for="business">Business</label>
+                </div>
+                <div>
+                    <input type="radio" id="first_class" name="flight_class" value="first_class">
+                    <label for="first_class">First Class</label>
+                </div>
+            </div>
+            <!-- Slider for budget -->
+            <div class="budget">
+                <label for="budget">Budget:</label>
+                <input type="range" id="budget" name="budget" min="0" max="200000" step="1000" value="0">
+                <p class="rupee">&#8377;</p>
+                <span id="budgetValue">0</span>
+                
+            </div>
 
-            <label for="budget">Budget:</label>
-            <input type="text" id="budget" name="budget" placeholder="Enter your budget">
-
-            <input type="submit" value="Search Flights">
+            <div class="submit_btn">
+                <input type="submit" value="Search Flights">
+            </div>
         </form>
     </div>
 </div>
